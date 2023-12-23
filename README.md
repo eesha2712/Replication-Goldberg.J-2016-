@@ -17,4 +17,3 @@ The paper also presents a counterfactual where all participants work at 140MK.  
 
 3.	ReadMe:
 The document you are reading now.
-![image](https://github.com/eesha2712/Stata-files/assets/154126381/1a578cff-c146-49bc-b41a-7f7d687a5329)
