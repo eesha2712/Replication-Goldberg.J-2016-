@@ -1,5 +1,3 @@
-** Course Project ECON 643 **
-
 ** The authors uses two seperate datasets for making the summary stats and the tables and to make the graphs. ///
 We are first importing the dataset relevant for the summary stats and the tables. ///
 And we will import the other dataset for the graphs later. 
@@ -8,7 +6,7 @@ And we will import the other dataset for the graphs later.
 
 clear 
 
-use "/Users/eeshaiyer/Documents/643 Project/116331-V1/replication/data/labor_supply_data_for_bs.dta"
+use "$labor_supply_data_for_bs.dta";
 ** Describe (with relevant variables only) (Q. 11) ///
 
 bys village wage: egen avg_labor=mean(labor)
@@ -52,7 +50,7 @@ sum wage accepted_wage
 
 clear 
 
-use "/Users/eeshaiyer/Documents/643 Project/116331-V1/replication/data/collapsed.dta"
+use "$collapsed.dta"
 
 ** Generating the Linear Regression estimates to calculate the elasticity (Table 6: Linear Regression of Labor against ln(wage)) (Q. 14) ///
 
@@ -74,7 +72,7 @@ xi: reg vil_labor lnwage i.village i.week, cluster(village)
 
 clear
 
-use "/Users/eeshaiyer/Documents/643 Project/116331-V1/replication/data/labor_supply_data_for_bs.dta"
+use "$labor_supply_data_for_bs.dta"
 
 bys village wage: egen avg_labor=mean(labor)
 
